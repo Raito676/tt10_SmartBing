@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "SmartBing"      # Project title
+  author:       "Juan Manuel Perez Cozatl, Ayshane Dominguez Davila, Miguel Alejandro Garcia Hernandez"      # Your name
+  discord:      "1_anubis_1"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Bote de basura controlado por 3 sensores ultrasonicos, diodos led que nos indican cuando el bote esta vacio o lleno, ayudado de un servomotor controlado por uno de los sensores ultrasonicos para que se abra en un lapso de 10 segundos para continuar con un cierre automatico, en caso de una falla dentro del circuito se activara un led (alarma) de color amarillo"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -11,46 +11,58 @@ project:
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_SmartBing"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "tt_um_SmartBing.v"
+    "SmartBing.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
-
+  ui[0]: "unused pin"
+  ui[1]: "unused pin"
+  ui[2]: "TRIGGER PIN SU"
+  ui[3]: "unused pin"
+  ui[4]: "unused pin"
+  ui[5]: "unused pin"
+  ui[6]: "unused pin"
+  ui[7]: "TRIGGER PIN LH"
+  ui[8]: "unused pin"
+  ui[9]: "TRIGGER PIN LL"
+  ui[10]: "unused pin"
+  ui[11]: "unused pin"
+  ui[12]: "unused pin"
+  ui[13]: "unused pin"
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "unused pin"
+  uo[1]: "unused pin"
+  uo[2]: "unused pin"
+  uo[3]: "ECHO PIN SU"
+  uo[4]: "unused pin"
+  uo[5]: "unused pin"
+  uo[6]: "SERVOMOTOR PIN"
+  uo[7]: "unused pin"
+  ui[8]: "ECHO PIN LH"
+  ui[9]: "unused pin"
+  ui[10]: "ECHO PIN LL"
+  ui[11]: "LED LLENADO"
+  ui[12]: "LED VACIO "
+  ui[13]: "LED ERROR"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "unused pin"
+  uio[1]: "unused pin"
+  uio[2]: "unused pin"
+  uio[3]: "unused pin"
+  uio[4]: "unused pin"
+  uio[5]: "unused pin"
+  uio[6]: "unused pin"
+  uio[7]: "unused pin"
 
 # Do not change!
 yaml_version: 6
