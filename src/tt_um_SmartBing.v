@@ -29,8 +29,8 @@ module tt_um_SmartBing (
 
         
   // All output pins must be assigned. If not used, assign to 0.
-    assign uo_out[0:1] = 2'00;  // Example: ou_out is the sum of ui_in and uio_in
-    assign uio_out[0:6] = 6'000000;
+    assign uo_out[1:0] = 2'00;  // Example: ou_out is the sum of ui_in and uio_in
+    assign uio_out[6:0] = 6'000000;
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
